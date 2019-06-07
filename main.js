@@ -1,4 +1,11 @@
 (() => {
+
+	const read = (sen) => {
+        	var msg = new SpeechSynthesisUtterance(sen);
+        	window.speechSynthesis.speak(msg);
+    		// speechSynthesis.cancel();
+    	}
+	
 	read("Hi there, what's your name?")
 	var name = prompt("Hi there, what's your name?")
 	var intro = read(`Hello ${name}, please enter what u want me to read`);
@@ -9,12 +16,5 @@
 			read(e);
 		})
 	}, 2000);
-
-
-    read = (sen) => {
-        var msg = new SpeechSynthesisUtterance(sen);
-        window.speechSynthesis.speak(msg);
-    	// speechSynthesis.cancel();
-    }
 	
 })();
